@@ -9,16 +9,23 @@ for (let i = 0; i < 25; i++) {
 }
 return array
 }
-
 function whileLoop(n) {
-    while (n > 0) {
+    while (n >= 0) {
       if (n === 0) {
-        console.log('done')
+        return 'done'
       }
       else {
-        console.log(n)
+        console.log(--n)
       }
-      --n
     }
   return n
+}
+function doWhileLoop(array) {
+  function maybeTrue() {
+  return Math.random() >= 0.5
+}
+do {
+  array.shift(array)
+} while (array.length > 0 && maybeTrue())
+return array
 }
